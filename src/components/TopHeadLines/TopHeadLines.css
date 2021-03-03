@@ -1,0 +1,10 @@
+.topHeadLines{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.topHeadLines div{
+    width: 45%;
+    background-color: ghostwhite;
+    margin: 5px;
+}
