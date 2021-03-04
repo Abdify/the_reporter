@@ -1,22 +1,25 @@
 import React from 'react';
-import { Button, Jumbotron } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
+import "./News.css";
 
 const News = (props) => {
-    const {articles} = props;
+    const {article} = props;
     return (
         <>
-            <Jumbotron>
-                <h1 className="text-danger">Breaking news</h1>
+            <Card>
                 <div>
-                    <h3>{articles[0].title}</h3>- By {articles[0].author} on{" "}
-                    {articles[0].publishedAt}
-                    <p>{articles[0].content}</p>
-                    <img src={articles[0].urlToImage} alt="" />
+                    <h3>{article.title}</h3>
+                    <i className="fas fa-user"></i> {article.author} <br />
+                    <i className="fas fa-clock"></i> {article.publishedAt}
+                    <img src={article.urlToImage} alt="" />
+                    <p>{article.description}</p>
                 </div>
                 <p>
-                    <Button variant="primary">Learn more</Button>
+                    <Button variant="dark" size="sm">
+                        <a href={article.url}>Learn more</a>
+                    </Button>
                 </p>
-            </Jumbotron>
+            </Card>
         </>
     );
 };

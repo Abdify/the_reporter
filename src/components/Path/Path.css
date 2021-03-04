@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav{
+    width: 25%;
+}
+main{
+    width: 70%;
+    margin: 10px;
+}
+
+nav p{
+    border: 1px solid black;
+    color: black;
+    background-color: lightgrey;
+    padding: 5px;
+}
